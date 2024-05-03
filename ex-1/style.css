@@ -1,1 +1,172 @@
 /* Start coding here */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --maincolor: #ff8345;
+  --fontcolor: #183b56;
+}
+
+body {
+  background-color: white;
+}
+
+.job-categories {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 65.95px;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.title-job {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  position: relative;
+  color: var(--fontcolor);
+  font-size: 40px;
+  text-align: center;
+  z-index: 1;
+}
+
+.rectangle-title {
+  content: "";
+  width: 76.13px;
+  height: 20px;
+  position: absolute;
+  background-color: var(--maincolor);
+  bottom: 12px;
+  z-index: -1;
+}
+
+.img-1 {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.button {
+  position: absolute;
+  left: 260px;
+  top: 200px;
+}
+
+.button-explore {
+  position: absolute;
+  left: 230px;
+  top: 130px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: rgba(179, 186, 197, 0.1);
+}
+
+.button-explore:hover {
+  cursor: pointer;
+}
+
+.box {
+  background-color: white;
+  border: 1px solid #ededed7d;
+  border-radius: 8px;
+  height: 268px;
+  width: 333px;
+  position: relative;
+  transition: background-color 0.5s ease;
+}
+
+.box-explore {
+  background-color: var(--maincolor);
+  border: 1px solid #ededed7d;
+  border-radius: 8px;
+  height: 268px;
+  width: 333px;
+  position: relative;
+}
+
+.explore-text {
+  font-family: poppins;
+  font-size: 24px;
+  color: white;
+  position: absolute;
+  top: 90px;
+  left: 60px;
+}
+
+.group-job-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.group-job-2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.group-categaries {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 50px;
+  height: 50vh;
+  gap: 20px;
+}
+
+.group-job .explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-text {
+  position: absolute;
+  left: 30px;
+  top: 170px;
+}
+
+.text {
+  font-family: poppins;
+  font-size: 20px;
+  color: var(--fontcolor);
+  font-weight: 600;
+}
+
+.status {
+  margin-top: 10px;
+  color: #5a7184;
+  font-family: DM sans;
+}
+
+@media only screen and (max-width: 600px) {
+  .job-categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .group-job-1,
+  .group-job-2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .group-categaries {
+    display: flex;
+    flex-direction: column;
+  }
+}
