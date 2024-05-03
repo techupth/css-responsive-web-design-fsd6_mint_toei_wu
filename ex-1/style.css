@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Kodchasan&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;1,500&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap");
+
 :root {
   --font-color: #183b56;
+  --them-color: #ff8345;
 }
 
 * {
@@ -11,7 +13,7 @@
 }
 
 .container {
-  margin: 5%;
+  margin: 5% 0 0 0;
   width: 100%;
   height: 100%;
   display: flex;
@@ -32,10 +34,10 @@
 
 .box-1,
 .box-2 {
-  width: 60%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-center;
+  gap: 20px;
 }
 
 .item {
@@ -47,19 +49,37 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 50px;
 }
 
-.item > i {
-  margin: 16px;
-  font-size: 50px;
-  flex-basis: 150px;
+.icon {
+  width: 90px;
+  height: 90px;
+  background-color: hsla(20, 100%, 64%, 0.1);
+  border-radius: 90%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.icon > i {
+  font-size: 45px;
+  text-align: center;
+  z-index: 2;
+  color: var(--them-color);
+}
+
+.job-detail {
+  display: flex;
+  flex-direction: column;
 }
 
 .item .job-category {
   font-weight: 700px;
   font-size: 24px;
   color: var(--font-color);
-  flex-basis: 50px;
 }
 
 .item .job-opened {
@@ -81,7 +101,7 @@
 .explore {
   width: 333px;
   height: 268px;
-  background-color: #ff8345;
+  background-color: var(--them-color);
   border: 1px solid #ededed;
   border-radius: 10px;
   display: flex;
@@ -103,6 +123,33 @@
   color: white;
   text-align: center;
   flex: 1;
+}
+
+/* Pseudo-class-style */
+.item:hover {
+  background-color: hsla(192, 4%, 54%, 0.1);
+  cursor: pointer;
+  box-shadow: 1px 9px 13px 9px rgba(0, 0, 0, 0.22);
+
+  .icon {
+    width: 90px;
+    height: 90px;
+    background-color: var(--them-color);
+    border-radius: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .icon i {
+    color: white;
+  }
+}
+
+.explore:hover {
+  background-color: hsla(15, 100%, 64%, 1);
+  cursor: pointer;
+  box-shadow: 1px 9px 13px 9px rgba(0, 0, 0, 0.22);
 }
 
 @media only screen and (max-width: 700px) {
